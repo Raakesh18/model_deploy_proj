@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Biomedical chatbot
+    </title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            color: aliceblue;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Biomedical chatbot</h1>
+    <div>
+        <form method="POST" action="/predict">
+            <textarea rows="12" cols="60" name="content" placeholder="enter your query here" autocomplete="off">{{ query }}</textarea>
+            <div>
+                <button>
+                    Submit
+                </button>
+                <a href="/">Reset</a>
+            </div>
+        </form>
+    </div>
+    <p id="display">{{ predictions }}</p>
+</body>
+
+</html>
